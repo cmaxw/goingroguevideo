@@ -24,7 +24,7 @@
 
     <div style="clear: both;"></div>
 
-    <%= image_tag "TreasureChest.jpg",
+    <%= image_tag "TreasureMap.jpg",
         style: "float: right; height: 170px; padding-left: 10px;" %>
 
     <p>Have you tried learning Ruby on Rails from a book? Ever wished
@@ -48,7 +48,7 @@
 
 <div class="row">
   <div class="span2">
-    <%= image_tag "TreasureMap.jpg" %>
+    <%= image_tag "TreasureChest.jpg" %>
   </div>
   <div class="span5">
     <h4>The course includes:</h4>
@@ -295,7 +295,102 @@
 
 <div class="row">
   <div class="span6">
-    <h3>Just What You Need</h3>
-    <p>Whether you're a new programmer or </p>
+    <h3>About Charles Max Wood</h3>
+    <p>
+      <%= image_tag "cmaxw.jpg", style: "float: left; padding-right: 5px" %>
+      Charles Max Wood is a programmer, podcaster, and family man
+      living in Lehi, Utah. He is the host of several podcasts, has
+      recorded multiple programming tutorials at <%= link_to "Teach Me
+      To Code", "http://teachmetocode.com" %>, and spoken at several
+      conferences. He has been programming with Ruby on Rails for 7
+      years and built myriad sites including social networks,
+      reporting applications, mapping and geospacial applications, and
+      financial applications.
+    </p>
+
+    <p>Charles is currently a freelance web developer. His company is
+    Intentional Excellence Productions, LLC.</p>
+
+    <h4>Podcasts</h4>
+    <p>
+      <%= image_tag "RubyRogues.png",
+          style: "float: left; padding-right: 5px" %>
+      <%= link_to "The Ruby Rogues Podcast", "http://rubyrogues.com" %>
+      is a weekly podcast discussion around concepts
+      relating to Ruby and good programming practices. It features
+      other top Rubyists either as regular co-hosts or guests.
+    </p>
+    <div style="clear: both"></div>
+    <p style="margin-top: 10px;">
+      <%= image_tag "railscoach.jpg",
+          style: "float: left; padding-right: 5px" %>
+      <%= link_to "The Rails Coach Podcast", "http://railscoach.com" %>
+      is designed to help people new to Ruby on Rails understand the
+      concepts behind the libraries and approaches to Ruby on
+      Rails. Each show is 5-10 minutes long and after the recent
+      reboot has an accompanying video.
+    </p>
+    <p style="margin-top: 10px;">
+      <%= image_tag "tmtc.png",
+          style: "float: left; padding-right: 5px" %>
+      <%= link_to "Teach Me To Code", "http://teachmetocode.com" %>
+      is a series of screencasts explaining code concepts and
+      demonstrating how to build various websites. Many of the videos
+      are demonstrations of how to use Ruby on Rails.
+    </p>
+
+    <div style="clear: both;"></div>
+    <h4>Speaking/Conferences</h4>
+    <p style="margin-top: 10px;">
+      <ul>
+        <li>
+          <%= link_to "Cloning Twitter: Rails + Cassandra = Scalable Sharing",
+              "http://confreaks.com/videos/731-rockymtnruby2011-cloning-twitter-rails-cassandra-scalable-sharing"
+              %>
+        </li>
+        <li>
+          <%= link_to "Ruby Rogues - Live Podcast!",
+          "http://confreaks.com/videos/904-railsconf2012-ruby-rogues-live-podcast"
+          %>
+        </li>
+        <li>
+          <%=
+             link_to "Facing the Monolith: Overcoming Monolithic
+             Applications with SOA",
+             "http://confreaks.com/videos/1249-aloharuby2012-facing-the-monolith-overcoming-monolithic-applications-with-soa"
+             %>
+        </li>
+      </ul>
+    </p>
+  </div>
+  <div class="span6">
+    <h3>About Ruby on Rails</h3>
+    <p>
+      Ruby on Rails is a terrific framework for building web
+      applications. It hides a lot of the details of interacting with
+      the database. It provides a clear way to organize your
+      code. And, it is arguably the fastest way to build a website or
+      web application.
+    </p>
+
+    <p>
+      Ruby on Rails' modular design gives the programmer a simple way
+      to substitute pieces of technology with others. It allows you
+      switch out frameworks for CSS, JavaScript, testing, database
+      access, and many others.
+    </p>
+
+    <p>
+      Many of the functions and methods used in Ruby on Rails are
+      named after what they do. These helper methods make building
+      forms, lists, and other web components very easy.
+    </p>
+
+    <p>
+      Building XML and JSON apis are exceptionally simple in
+      Rails. You can build a view (or template) for the responses to
+      API calls or you can simply use the built-in methods for
+      converting objects to XML or JSON.
+    </p>
   </div>
 </div>
