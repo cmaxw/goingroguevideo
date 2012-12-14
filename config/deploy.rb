@@ -21,6 +21,7 @@ role :db,  "198.74.54.94", :primary => true # This is where Rails migrations wil
 
 after "deploy:create_symlink", "deploy:link_config"
 after "deploy:link_config", "deploy:migrate"
+after "deploy:migrate", "deploy:compile_assets"
 
 
 # if you're still using the script/reaper helper you will need
@@ -40,5 +41,9 @@ namespace :deploy do
 
   task :migrate do
     run "#{try_sudo} cd #{deploy_to}/current && RAILS_ENV=production rake db:migrate"
+  end
+
+  task :compile_assets do
+    run "#{try_sudo} cd #{deploy_to}/current && rake assets:precompile"
   end
 end
