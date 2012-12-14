@@ -9,17 +9,19 @@ set :scm, :git # You can set :scm explicitly or Capistrano will make an intellig
 default_run_options[:pty] = true
 set :use_sudo, false
 set :deploy_to, '/var/www/railsrampup'
-set :user, 'chuck'
+set :user, 'deploy'
 set :deploy_via, :remote_cache
 
-role :web, "173.255.201.23"                          # Your HTTP server, Apache/etc
-role :app, "173.255.201.23"                          # This may be the same as your `Web` server
-role :db,  "173.255.201.23", :primary => true # This is where Rails migrations will run
+role :web, "198.74.54.94"                          # Your HTTP server, Apache/etc
+role :app, "198.74.54.94"                          # This may be the same as your `Web` server
+role :db,  "198.74.54.94", :primary => true # This is where Rails migrations will run
 
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
 
-before "deploy:migrate", "deploy:link_config"
+after "deploy:create_symlink", "deploy:link_config"
+after "deploy:link_config", "deploy:migrate"
+
 
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
@@ -34,5 +36,9 @@ namespace :deploy do
 
   task :link_config do
     run "#{try_sudo} ln -s #{deploy_to}/shared/config/database.yml #{deploy_to}/current/config/database.yml"
+  end
+
+  task :migrate do
+    run "#{try_sudo} cd #{deploy_to}/current && RAILS_ENV=production rake db:migrate"
   end
 end
