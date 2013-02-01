@@ -8,9 +8,21 @@
       <%= link_to image_tag("large-signupnow.png"),
       "http://railsrampup.eventbrite.com" %>
     </div>
+  </div>
+<div>
 
-    <div style="clear: both;"></div>
+<div class="row" id="guarantee">
+  <div class="span2">
+    <%= image_tag "guarantee.png" %>
+  </div>
+  <div class="span10" id="guarantee-terms">
+    If you're not 100% happy with Rails Ramp Up, you'll get a full
+    refund.
+  </div>
+</div>
 
+<div class="row">
+  <div class="span12">
     <div id="launchbox">
       <h1 class="centered">Here's what you get from the Rails Ramp Up course...</h1>
       <div class="whatyouget">
@@ -283,7 +295,7 @@
           <td>
             <ul>
               <li>Authentication (Devise)</li>
-              <li>File Uploads (Paperclip)</li>
+              <li>File Uploads (CarrierWave)</li>
               <li>CSS Frameworks (Twitter Bootstrap)</li>
               <li>Charging Money (Stripe)</li>
               <li>Application Monitoring (New Relic)</li>
