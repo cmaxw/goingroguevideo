@@ -1,23 +1,27 @@
 <div class="row" id="mainintro">
   <div class="span12">
-    <h1 class="centered" style="padding-bottom: 30px;">Build and Launch a Ruby on Rails Application in 8 Weeks</h3>
-
     <div class="centered">
       <iframe width="853" height="480" src="http://www.youtube.com/embed/bPsUmhUjQmM?rel=0" frameborder="0" allowfullscreen></iframe>
 
-      <%= link_to image_tag("large-signupnow.png"),
-      "http://railsrampup.eventbrite.com" %>
+      <div class="register">
+        <%= link_to image_tag("register-here.png"),
+          "http://railsrampup.eventbrite.com" %>
+      </div>
     </div>
   </div>
-<div>
+</div>
 
 <div class="row" id="guarantee">
-  <div class="span2">
-    <%= image_tag "guarantee.png" %>
-  </div>
-  <div class="span10" id="guarantee-terms">
-    If you're not 100% happy with Rails Ramp Up, you'll get a full
-    refund.
+  <div class="span8 offset2" style="background: #ddddff; padding: 20px; margin-bottom: 30px;">
+    <%= image_tag "guarantee.png", style: "float: left;" %>
+    <div>
+      <h4>My Guarantee</h4>
+      <p>I want you to <strong>love</strong> this course. If you're not
+      completely satisfied with the course, let me know and I'll give
+      you your money back.</p>
+
+      <%= image_tag "signature.png", class: "signature", style: "float: right;" %>
+    </div>
   </div>
 </div>
 
@@ -94,7 +98,7 @@
           <%= image_tag "video-clapperboard.png" %>
         </div>
         <div class="body">
-          <h3>Digital Copies of All Online Lessons</h3>
+          <h3>Digital Copies of Online Lessons</h3>
           <p>After each lesson, you'll be able to download and rewatch
           each lesson as many times as you want. We'll also embed them
           in the membership area for the course if you'd rather stream
@@ -147,6 +151,13 @@
       </div>
       <div class="clear"></div>
     </div>
+  </div>
+</div>
+
+<div class="row register">
+  <div class="span12">
+    <%= link_to image_tag("register-here.png"),
+      "http://railsrampup.eventbrite.com" %>
   </div>
 </div>
 
@@ -365,6 +376,13 @@
         </tr>
       </tbody>
     </table>
+  </div>
+</div>
+
+<div class="row register">
+  <div class="span12">
+    <%= link_to image_tag("register-here.png"),
+      "http://railsrampup.eventbrite.com" %>
   </div>
 </div>
 
