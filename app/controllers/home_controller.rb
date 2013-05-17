@@ -8,7 +8,7 @@ class HomeController < ApplicationController
   def thanks
   end
 
-  def debugging-video
+  def debuggingvideo
     redirect_to "http://debuggingruby.eventbrite.com/"
   end
 end
