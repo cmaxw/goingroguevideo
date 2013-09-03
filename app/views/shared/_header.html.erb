@@ -5,8 +5,7 @@
   
   <title>Simpler Landing</title>
   
-  <link rel="stylesheet" type="text/css" media="all" href="style.css" />
-  <link rel="stylesheet" type="text/css" media="all" href="js/prettyPhoto/prettyPhoto.css" />
+  <%= stylesheet_link_tag :application %>
   
   <!-- Generate Favicon Using 1.http://tools.dynamicdrive.com/favicon/ OR 2.http://www.favicon.cc/ -->
   <link rel="shortcut icon" href="favicon.ico" />		
@@ -48,26 +47,22 @@
 	<div id="header">
 	  
 	  <!-- logo is here -->
-	  <a href="#"><img src="images/logo.png" alt="logo" class="logo" /></a>
-	  <h1>Simple</h1>
-	  
-	  
+	  <%= link_to image_tag("logo.png", alt: "logo", class: "logo"), root_path %>
+	  <h1>Rails Ramp Up</h1>
+
 	  <div class="header-info">				
-	    
 	    <div class="tell-number">
 	      <p>
 		<span>Call Us at</span><br />
-		0801-123-4569
+		801-367-6164
 	      </p>
 	    </div>
 	    
 	    <div class="header-socail-naav">
 	      <p>Follow Us</p>
 	      <ul>
-		<li><a href="#" class="twitter"></a></li>
-		<li><a href="#" class="facebook"></a></li>
-		<li><a href="#" class="flicker"></a></li>
-		<li><a href="#" class="rss"></a></li>
+		<li><a href="http://twitter.com/cmaxw" class="twitter"></a></li>
+		<li><a href="http://facebook.com/charlesmaxwood" class="facebook"></a></li>
 	      </ul>						
 	    </div>
 	    
