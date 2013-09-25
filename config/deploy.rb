@@ -1,14 +1,14 @@
 require 'bundler/capistrano'
 
-set :application, "railsrampup"
-set :repository,  "git@github.com:IntentionalExcellence/railsrampup.git"
+set :application, "goingroguevideo"
+set :repository,  "git@github.com:cmaxw/goingroguevideo.git"
 
 set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
 default_run_options[:pty] = true
 set :use_sudo, false
-set :deploy_to, '/var/www/railsrampup'
+set :deploy_to, '/var/www/goingroguevideo'
 set :user, 'deploy'
 set :deploy_via, :remote_cache
 
