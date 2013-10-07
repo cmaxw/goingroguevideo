@@ -1,7 +1,7 @@
 GoingRogue::Application.routes.draw do
   get 'about', :to => "home#about"
   get 'thanks', :to => "home#thanks"
-  get 'debugging-video', :to => "home#debuggingvideo"
+  get 'evernote', :to => "home#evernote"
 
   get 'harvest', to: redirect("http://getharvest.com")
   get 'lessaccounting', to: redirect("http://lessaccounting.com")
